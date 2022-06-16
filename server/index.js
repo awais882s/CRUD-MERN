@@ -1,11 +1,10 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const FoodeModel = require("./models/Food");
-// const cors = require("cors");
+const cors = require("cors");
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 mongoose.connect(
   "mongodb+srv://newuser:12345@crud.r7u0ft5.mongodb.net/food?retryWrites=true&w=majority",
   {

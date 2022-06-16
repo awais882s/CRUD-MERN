@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-// import Axios from 'axios'
-import Axios from "axios"
+import Axios from "axios";
 
 export default function Food() {
   const [foodName, setFoodName] = useState("")
@@ -14,8 +13,9 @@ export default function Food() {
     // console.log(days);
 
   }
+
   const submitHandler = () => {
-    Axios.post("https://localhost:3001/insert", {
+    Axios.post("http://localhost:3001/insert", {
       foodName: foodName,
       days: days
     })
@@ -30,7 +30,6 @@ export default function Food() {
       <label htmlFor="no">Days Since You Ate It:</label>
       <input type="number" name="" id="no" placeholder="No of Food" onChange={daysHandler} />
       <button onClick={submitHandler}>Add To List</button>
-      {/* <h1>{ite}</h1> */}
-    </div>
+    </div >
   )
 }
