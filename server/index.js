@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 mongoose.connect(
-  "mongodb+srv://newuser:12345@crud.r7u0ft5.mongodb.net/food?retryWrites=true&w=majority",
+  "mongodb+srv://newuser:<password>@crud.r7u0ft5.mongodb.net/food?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
   }
